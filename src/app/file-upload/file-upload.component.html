@@ -1,0 +1,21 @@
+<div class="center">
+    <h5>Meeting Assistant AI</h5> <br/>
+
+  <input type="file" class="file-input" (change)="onChange($event)" accept="text/plain" #fileUpload />
+
+</div>
+
+<div>
+  <h3>Meeting Participants</h3>
+  <tag-input [(ngModel)]="items"
+             [modelAsStrings]="true">
+  </tag-input>
+  <button mat-raised-button color="primary" (click)="sendEmail()">Send Email</button>
+  <button style="margin-left: 10px;" mat-raised-button color="primary" (click)="sendonConfluence()">Send on Confluence</button>
+</div>
+
+
+<div style="margin-top: 30px;">
+ <textarea matInput placeholder="" rows="10" cols="20">{{fileContent}}</textarea>
+</div>
+
